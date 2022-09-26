@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+
+  <body class="dark">
+    <div id="app" class="bg-[#d5d5d5] dark:bg-[#040404] text-black dark:text-white overflow-x-hidden w-screen">
+      <div
+        class="preloader flex w-screen h-screen fixed bg-[#d5d5d5] dark:bg-[#040404] z-50 justify-center items-center"
+      >
+        <span class="loader"></span>
+      </div>
+
+      <div class="custom-cursor">
+        <div
+          class="circle z-50 hidden lg:block w-16 h-16 rounded-full border border-black dark:border-white absolute opacity-75"
+        ></div>
+
+        <!--  put dot in the middle-->
+        <div
+          class="dot z-50 hidden lg:block w-4 h-4 rounded-full bg-black dark:bg-white absolute opacity-75"
+        ></div>
+      </div>
+
+      <div
+        class="sidebar h-screen w-14 border-r-2 border-r-[#5e5e5e] fixed py-10 hidden md:block"
+      >
+        <div class="flex flex-col justify-between h-full w-full">
+          <div class="sidebar-title font-black text-2xl -rotate-90 opacity-75">
+            LVLY
+          </div>
+
+          <div class="flex flex-col items-center">
+            <span class="text-xs py-4 font-extralight" id="light-mode">Light </span>
+            <span class="text-xs py-4 font-semibold" id="dark-mode">Dark</span>
+          </div>
+
+          <div
+            class="sidebar-links flex flex-col items-center justify-between font-black text-2xl opacity-90"
+          >
+            <div class="sidebar-link-item py-4 magic-hover">DR</div>
+            <div class="sidebar-link-item py-4 magic-hover">TW</div>
+            <div class="sidebar-link-item py-4 magic-hover">IG</div>
+          </div>
+        </div>
+      </div>
+      <div class="content md:pl-20">
+        <div
+          class="main-screen h-screen w-full flex flex-col justify-center items-center mb-40"
+        >
+          <div class="first-text md:h-1/2 w-full md:flex flex-row">
+            <div
+              class="first-text-desc w-[40%] hidden md:flex justify-center items-center"
+            >
+              <div class="w-[40%] text-sm">
+                Lvly is a design studio that creates beautiful, functional
+                websites and apps for startups and small businesses.
+              </div>
+            </div>
+            <div
+              class="first-text-content text-center w-[60] font-black text-[6rem] md:text-[16rem] flex justify-center items-center mr-12"
+            >
+              <div class="first-text-chars z-30 overflow-hidden h-fit">
+                <div class="inner fit-text" data-splitting>LVLY</div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="second-text md:h-1/2 w-full font-black text-[4rem] md:text-[17rem] flex justify-center items-center mr-12"
+          >
+            <div
+              class="second-text-image z-10 h-36 w-36 bg-[url('/img/1.jpg')] bg-center bg-cover hidden md:block"
+            ></div>
+            <div
+              class="second-text-chars text-center z-30 overflow-hidden h-fit"
+            >
+              <div class="inner fit-text" data-splitting>STUDIO</div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="section-2 h-[17rem] md:h-screen w-full flex flex-col px-8 overflow-x-hidden"
+        >
+          <div
+            class="w-full md:h-1/2 font-black text-center text-[2rem] md:text-[11rem] fit-text"
+          >
+            WE DARE TO
+          </div>
+          <div class="w-full h-1/2">
+            <div class="flex flex-row w-full justify-center items-center">
+              <div class="section-2-desc w-[20%] hidden md:block">
+                <div class="text-sm">
+                  With our team of designers and developers, we create
+                  beautiful, functional websites and apps for startups
+                </div>
+              </div>
+              <div
+                class="rellax z-10 w-[10rem] h-[8rem] md:h-[22rem] md:w-[22rem] absolute"
+                data-rellax-speed="2"
+                data-rellax-xs-speed="5"
+              >
+                <div
+                  class="w-full h-full bg-[url('/img/1.jpg')] bg-center bg-cover rotate-12"
+                ></div>
+              </div>
+              <div
+                class="md:w-[80%] text-[3rem] md:text-[11rem] fit-text font-black stroke-text z-20"
+              >
+                CREATE
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-3 py-40 font-black z-30">
+          <div
+            class="rellax hidden md:block z-10 h-[22rem] w-[22rem] absolute"
+            data-rellax-speed="-1"
+          >
+            <div
+              class="w-full h-full bg-[url('/img/2.jpg')] bg-center bg-cover rotate-12"
+            ></div>
+          </div>
+          <div
+            class="z-30 relative text-fit text-[3rem] md:text-[8rem] px-8 md:px-0"
+          >
+            WE CREATE
+            <span class="italic font-thin"
+              >DIGITAL <span class="stroke-text">EXPERIENCES </span></span
+            >
+            THAT IS MATCHED BY NO
+            <span class="italic font-thin">MAN OR BEAST</span>
+          </div>
+        </div>
+
+        <div class="section-4">
+          <div class="item my-9 flex justify-center items-center magic-hover">
+            <div
+              class="rellax item-text text-[12rem] font-black absolute fit-text"
+              data-rellax-speed="0.6"
+            >
+              LORENZO
+            </div>
+            <div class="w-[80%] h-[40rem] image-container overflow-hidden">
+              <div
+                class="image-inner w-full h-full bg-[url('/img/1.jpg')] bg-center bg-cover"
+              ></div>
+            </div>
+          </div>
+
+          <div class="item my-9 flex justify-center items-center magic-hover">
+            <div
+              class="rellax item-text text-[12rem] font-black absolute fit-text"
+              data-rellax-speed="0.6"
+            >
+              ARABELLA
+            </div>
+            <div class="w-[80%] h-[40rem] image-container overflow-hidden">
+              <div
+                class="image-inner w-full h-full bg-[url('/img/2.jpg')] bg-center bg-cover"
+              ></div>
+            </div>
+          </div>
+
+          <div class="item my-9 flex justify-center items-center magic-hover">
+            <div
+              class="rellax item-text text-[12rem] font-black absolute fit-text"
+              data-rellax-speed="0.6"
+            >
+              BRIENNA
+            </div>
+            <div class="w-[80%] h-[40rem] image-container overflow-hidden">
+              <div
+                class="image-inner w-full h-full bg-[url('/img/3.jpg')] bg-center bg-cover"
+              ></div>
+            </div>
+          </div>
+
+          <div class="item my-9 flex justify-center items-center magic-hover">
+            <div
+              class="rellax item-text text-[12rem] font-black absolute fit-text"
+              data-rellax-speed="0.6"
+            >
+              CLEOPATRA
+            </div>
+            <div class="w-[80%] h-[40rem] image-container overflow-hidden">
+              <div
+                class="image-inner w-full h-full bg-[url('/img/4.jpg')] bg-center bg-cover"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-section mx-4 md:mx-32 py-11">
+          <div class="contact-title text-[5rem] font-black">LVLY</div>
+
+          <div class="contact-links">
+            <div
+              class="link magic-hover border-b-2 text-[3rem] border-b-black dark:border-b-white font-medium py-3 opacity-75"
+            >
+              DRIBBLE
+            </div>
+            <div
+              class="link magic-hover border-b-2 text-[3rem] border-b-black dark:border-b-white font-medium py-3 opacity-75"
+            >
+              TWITTER
+            </div>
+            <div
+              class="link magic-hover border-b-2 text-[3rem] border-b-black dark:border-b-white font-medium py-3 opacity-75"
+            >
+              INSTAGRAM
+            </div>
+          </div>
+        </div>
+
+        <div class="credits text-center text-sm py-6">
+          2022 lvly agency &COPY;
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

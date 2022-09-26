@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "nordstern_demodunkel";
+  src: url("/fonts/nordsterndemo-dunkel-webfont.woff2") format("woff2"), url("/fonts/nordsterndemo-dunkel-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "nordstern_demohell";
+  src: url("/fonts/nordsterndemo-hell-webfont.woff2") format("woff2"), url("/fonts/nordsterndemo-hell-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "nordstern_demonormal";
+  src: url("/fonts/nordsterndemo-normal-webfont.woff2") format("woff2"), url("/fonts/nordsterndemo-normal-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "nordstern_demonormal";
+  cursor: none;
+  overflow-x: hidden !important;
+}
+
+.circle {
+  transition: all 0.4s linear;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+.dot {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.circle, .dot {
+  pointer-events: none;
+}
+
+.dark .stroke-text {
+  stroke: #fff;
+  stroke-width: 1px;
+  -webkit-text-stroke: #fff;
+  -webkit-text-stroke-width: 1px;
+  color: transparent;
+  fill: transparent;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: stroke 2s linear forwards;
+          animation: stroke 2s linear forwards;
+}
+
+.light .stroke-text {
+  stroke: #000;
+  stroke-width: 2px;
+  -webkit-text-stroke: #000;
+  -webkit-text-stroke-width: 2px;
+  color: transparent;
+  fill: transparent;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: stroke 2s linear forwards;
+          animation: stroke 2s linear forwards;
+}
+
+.blurry-cursor {
+  filter: blur(1px);
+  -webkit-backdrop-filter: invert(1);
+          backdrop-filter: invert(1);
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  margin: auto;
+  position: relative;
+}
+
+.loader:before {
+  content: "";
+  width: 48px;
+  height: 5px;
+  background: #000;
+  opacity: 0.25;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  border-radius: 50%;
+  -webkit-animation: shadow 0.5s linear infinite;
+          animation: shadow 0.5s linear infinite;
+}
+
+.loader:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  -webkit-animation: bxSpin 0.5s linear infinite;
+          animation: bxSpin 0.5s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+}
+
+@-webkit-keyframes bxSpin {
+  17% {
+    border-bottom-right-radius: 3px;
+  }
+  25% {
+    transform: translateY(9px) rotate(22.5deg);
+  }
+  50% {
+    transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+    border-bottom-right-radius: 40px;
+  }
+  75% {
+    transform: translateY(9px) rotate(67.5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+
+@keyframes bxSpin {
+  17% {
+    border-bottom-right-radius: 3px;
+  }
+  25% {
+    transform: translateY(9px) rotate(22.5deg);
+  }
+  50% {
+    transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+    border-bottom-right-radius: 40px;
+  }
+  75% {
+    transform: translateY(9px) rotate(67.5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+@-webkit-keyframes shadow {
+  0%, 100% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1);
+  }
+}
+@keyframes shadow {
+  0%, 100% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1);
+  }
+}/*# sourceMappingURL=style.css.map */
